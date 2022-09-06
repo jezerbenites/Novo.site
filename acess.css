@@ -1,0 +1,65 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #52b788;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Back Button */
+
+
+/* Container */
+.container-fluid {
+    background-color: #FFF;
+    width: 320px;
+    padding: 40px 25px;
+    margin: 0 20px;
+    border-radius: 10px;
+}
+
+/* Title */
+
+.title {
+    font-family: "Ubuntu";
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Login button */
+.btn-login {
+    background-color: #52b788;
+    color: #FFF;
+    transition: 1.5s;
+    margin-bottom: 20px;
+}
+
+.btn-login:hover {
+    background-color: #2d6a4f;
+    color: #FFF;
+}
+
+/* Login Links */
+.login-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link {
+    color: #000;
+    transition: 1.5s;
+}
+
+.link:hover {
+    color: #52b788;
+}
+
+@media (max-width: 365px) {
+   .login-links {
+        flex-direction: column;
+   }
+}
