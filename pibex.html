@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Icon -->
+        <link rel="shortcut icon" href="./images/icon-head.png" type="image/x-icon">
+        
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+        <!-- StyleSheets -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/ac611b35dd.js" crossorigin="anonymous"></script>
+
+        <!-- Bootstrap Scripts-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+		<style>
+		body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fff;
+}
+
+/* Navbar */
+
+.navbar {
+    padding: 1rem;
+    background-color: #52b788;
+}
+
+.navbar-brand {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #FFF;
+    transition: 1.5s;
+    margin: 0;
+}
+
+.nav-item {
+    padding: 0.5px;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #FFF;
+    transition: 1.5s;
+}
+
+.offcanvas-body,
+.offcanvas-header {
+    background-color: #52b788;
+    color: #FFF;
+}
+
+/* Container */
+main {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background-color: #52b788;
+    width: 1000px;
+    padding: 20px 25px;
+    margin: 100px 20px;
+    border-radius: 10px;
+}
+
+/*Wrapper inputs*/
+
+.wrapper {
+    display: flex;
+}
+
+/*Container INputs*/
+
+/*Box inputs*/
+
+.box-input:nth-child(2),
+.box-input:nth-child(3) {
+    margin-left: 10px;
+}
+
+.box-input {
+    width: 50%;
+}
+
+/* Title */
+
+.title {
+    font-family: "Ubuntu";
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Subtitulos */
+.subtitle {
+    font-size: 2rem;
+}
+.description {
+    font-size: 1.2rem;
+    color: red;
+}
+
+/*Wrapper radios*/
+
+.form-check-label {
+    margin-right: 10px;
+}
+
+/*Label Select*/
+
+.label-select {
+    margin-bottom: 5px;
+}
+
+/* Footer Section */
+
+#footer {
+    color: #FFF;
+    text-align: center;
+    min-height: 90px;
+    padding: 10px 100px;
+    background-color: #52b788;
+}
+
+.footer-text {
+    margin: 0;
+}
+
+.footer-icon {
+    color: #2d6a4f;
+    margin-bottom: 5px;
+    margin-right: 15px;
+}
+
+.variant-color {
+    color: #2d6a4f;
+}
+
+
+@media (max-width: 1100px) {
+    #footer {
+        padding: 10px 5px;
+    }
+}
+
+		</style>
+        <title>Formulário</title>
+    </head>
+    <body>
+    <!-- NavBar -->
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="index.html">Serviço Social</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                        Menu
+                    </h5>
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="form.php">
+                                <i class="fa-brands fa-wpforms"></i>
+                                Formulário
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="grafico.html">
+                                <i class="fa-solid fa-chart-line"></i>
+                                Gráficos
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-user"></i>
+                                Perfil
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html">
+                                <i class="fa-solid fa-circle-info"></i>
+                                Sobre
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="container-fluid main">
+                <h1 class="title">Formulário do PIBEX</h1>
+
+                <form action="#" method="#">
+                    <div class="wrapper-topic">
+                        <h2 class="subtitle">1. Identificação</h2>
+
+                        <div class="container-inputs">
+                            <small class="description">1.1 Dados básicos</small>
+
+                            <div class="mb-3 wrapper">
+                                <div class="box-input">
+                                    <label for="name">Nome: </label>
+                                    <input type="text" class="form-control" id="nome" name="nome">
+                                </div>
+                                <div class="box-input">
+                                    <label for="text">Idade: </label>
+                                    <input type="number" min="1" max="120" maxlength="2" class="form-control" id="idade" name="idade">
+                                </div>
+                                <div class="box-input">
+                                    <label for="text">Município de Origem? </label>
+                                    <input type="text" class="form-control" id="municipio" name="municipio">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container-inputs">
+                            <small class="description">1.2 Escolaridade</small>
+
+                            <div class="mb-3 wrapper">
+                                <div class="box-input">
+                                    <p>Ensino fundamental: </p>
+                                    <div class="wrapper-radio">
+                                        <input class="form-check-input" type="radio" name="fundamental" id="incompleto" value="incompleto">
+                                        <label class="form-check-label" for="incompleto">Incompleto</label>
+
+                                        <input class="form-check-input" type="radio" name="fundamental" id="incompleto" value="incompleto">
+                                        <label class="form-check-label" for="completo">Completo</label>
+                                    </div>
+                                </div>
+                                <div class="box-input">
+                                    <p>Ensino médio:</p>
+                                    <div class="wrapper-radio">
+                                        <input class="form-check-input" type="radio" name="fundamental" id="incompleto" value="incompleto">
+                                        <label class="form-check-label" for="completo">Incompleto</label>
+
+                                        <input class="form-check-input" type="radio" name="fundamental" id="incompleto" value="incompleto">
+                                        <label class="form-check-label" for="incompleto">Completo</label>
+                                    </div>
+                                </div>
+
+                                <div class="box-input">
+                                    <p>Ensino Superior:</p>
+                                    <div class="wrapper-radio">
+                                        <input class="form-check-input" type="radio" name="fundamental" id="incompleto" value="incompleto">
+                                        <label class="form-check-label" for="completo">Incompleto</label>
+
+                                        <input class="form-check-input" type="radio" name="fundamental" id="incompleto" value="incompleto">
+                                        <label class="form-check-label" for="incompleto">Completo</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-inputs">
+                            <small class="description">1.3 Outros</small>
+
+                            <div class="mb-3 wrapper">
+                                <div class="box-input">
+                                    <label for="religiao" class="label-select">Qual a sua religião? </label>
+                                    <select name="religiao" id="religiao" class="form-select">
+                                        <option value="catolico">Católico</option>
+                                        <option value="evangelico">Evangélico</option>
+                                        <option value="espirita">Espírita</option>
+                                        <option value="budismo">Budismo</option>
+                                        <option value="candomble">Candomblé</option>
+                                        <option value="umbanda">Umbanda</option>
+                                        <option value="hindu">Hinduísmo</option>
+                                        <option value="outra">Outra</option>
+                                    </select>
+                                </div>
+
+                                <div class="box-input">
+                                    <label for="genero" class="label-select">Qual sua identidade de gênero? </label>
+                                    <select name="genero" id="genero" class="form-select">
+                                        <option value="hetero">Heterossexual</option>
+                                        <option value="homo">Homossexual</option>
+                                        <option value="bi">Bissexual</option>
+                                        <option value="pan">Panssexual</option>
+                                        <option value="assexual">Assexual</option>
+                                        <option value="n-informar">Não quero informar</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 wrapper">
+                            <div class="box-input">
+                                    <label for="estado-civil" class="label-select">Qual seu estado civil? </label>
+                                    <select name="estado" id="estado" class="form-select">
+                                        <option value="solteiro">Solteiro</option>
+                                        <option value="casado">Casado</option>
+                                        <option value="uniao-estavel">União Estável</option>
+                                        <option value="divorciado">Divorciado</option>
+                                    </select>
+                            </div>
+                            
+                            <div class="box-input">
+                                <label for="raça" class="label-select">Como você se autodeclara? </label>
+                                    <select name="raça" id="raça" class="form-select">
+                                        <option value="branco">Branco</option>
+                                        <option value="Negro">Negro</option>
+                                        <option value="Pardo">Pardo</option>
+                                        <option value="Indigena">Indigena</option>
+                                        <option value="Amarelo">Amarelo</option>
+                                    </select>
+                            </div>
+                            </div>
+
+                            <div class="mb-3 wrapper">
+                                <div class="box-input">
+                                    <p>Empregado?</p>
+
+                                    <div class="wrapper-radio">
+                                        <input type="radio" id="empregado" name="empregado" class="form-check-input">
+                                        <label for="sim" class="form-check-label">Sim</label>
+                                        <input type="radio" id="empregado" name="empregado" class="form-check-input">
+                                        <label for="nao" class="form-check-label">Não</label>
+                                    </div>
+                                </div>
+
+                                <div class="box-input">
+                                    <p>Se resposta não, quanto tempo desempregado?</p>
+
+                                    <div class="wrapper-radio">
+                                        <input type="radio" id="nao-empregado" name="nao-empregado" class="form-check-input">
+                                        <label for="1ano" class="form-check-label">1 ano</label>
+                                        <input type="radio" id="nao-empregado" name="nao-empregado" class="form-check-input">
+                                        <label for="2ano" class="form-check-label">2 anos</label>
+                                        <input type="radio" id="nao-empregado" name="nao-empregado" class="form-check-input">
+                                        <label for="3ouMais" class="form-check-label">3 ou Mais</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 wrapper">
+                                <div class="box-input">
+                                    <label for="text">Há quanto tempo você/sua família mora no território? </label>
+                                    <input type="number" class="form-control" name="territorio" id="territorio">
+                                </div>
+
+                                <div class="box-input">
+                                    <p>Reconhece algum risco de desabamento no local?</p>
+
+                                    <div class="wrapper-radio">
+                                        <input type="radio" name="desabamento" id="sim" value="Sim" class="form-check-input">
+                                        <label for="sim" class="form-check-label">Sim</label>
+                                        <input type="radio" name="desabamento" id="não" value="Não" class="form-check-input">
+                                        <label for="não" class="form-check-label">Não</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 wrapper">
+                                <div class="box-input">
+                                    <p>Você tem rede de apoio?</p>
+
+                                    <div class="wrapper-radio">
+                                        <input type="radio" name="desabamento" id="sim" value="Sim" class="form-check-input">
+                                        <label for="sim" class="form-check-label">Sim</label>
+                                        <input type="radio" name="desabamento" id="não" value="Não" class="form-check-input">
+                                        <label for="não" class="form-check-label">Não</label>
+                                    </div>
+                                </div>
+
+                                <div class="box-input">
+                                    <label for="contar" class="label-select">Com quem você pode contar </label>
+                                    <select name="raça" id="raça" class="form-select">
+                                        <option value="comunidade">Comunidade</option>
+                                        <option value="comadre">Comadre</option>
+                                        <option value="igreja">Igreja</option>
+                                        <option value="outro">Outro</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

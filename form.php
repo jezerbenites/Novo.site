@@ -1,30 +1,6 @@
 <?php
     if(isset($_POST['submit']))
-    {   /*
-        print_r('Nome: ' . $_POST['nome']);
-        print_r('<br>');
-        print_r('Sobrenome: ' . $_POST['sobrenome']);
-        print_r('<br>');
-        print_r('E-mail: ' . $_POST['email']);
-        print_r('<br>');
-        print_r('Data de nascimento: ' . $_POST['data_nascimento']);
-        print_r('<br>');
-        print_r('Telefone ' . $_POST['telefone']);
-        print_r('<br>');
-        print_r('Sexo: ' . $_POST['sexo']);
-        print_r('<br>');
-        print_r('Endereço: ' . $_POST['endereco']);
-        print_r('<br>');
-        print_r('Número: ' . $_POST['numero']);
-        print_r('<br>');
-        print_r('Número: ' . $_POST['bairro']);
-        print_r('<br>');
-        print_r('Número: ' . $_POST['cidade']);
-        print_r('<br>');
-        print_r('Número: ' . $_POST['estado']);
-        print_r('<br>');
-        print_r('Número: ' . $_POST['senha']);
-        */
+    {   
         include_once('config.php');
 
         $nome =         $_POST['nome'];
@@ -70,7 +46,116 @@
 
     <!-- Bootstrap Scripts-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <style>
+    body {
+    font-family: "Poppins", sans-serif;
+    background-color: #52b788;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+h2, label {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/*Scroll bar*/
+
+::-webkit-scrollbar {
+    width: 10px;
+    color: #2d6a4f73;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2d6a4f;
+    border-radius: 5px;
+}
+
+/* Container */
+.container-fluid {
+    background-color: #FFF;
+    width: 600px;
+    padding: 20px 25px;
+    margin: 100px 20px;
+    border-radius: 10px;
+}
+
+/* Title */
+
+.title {
+    font-family: "Ubuntu";
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/*Wrapper inputs*/
+
+.wrapper {
+    display: flex;
+}
+
+/*Box inputs*/
+
+.box-input:nth-child(2) {
+    margin-left: 10px;
+}
+
+.box-input {
+    width: 50%;
+}
+
+/*Wrapper radios*/
+
+.form-check-label {
+    margin-right: 10px;
+}
+
+/* Sign-up button */
+.btn-login {
+    background-color: #52b788;
+    color: #FFF;
+    transition: 1.5s;
+    margin-bottom: 20px;
+}
+
+.btn-login:hover {
+    background-color: #2d6a4f;
+    color: #FFF;
+}
+
+.link {
+    color: #52b788;
+    transition: 1.5s;
+}
+
+.link:hover {
+    color: #2d6a4f;
+}
+
+@media (max-width: 650px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper div {
+        width: 100%;
+    }
+
+    .box-input {
+        margin-bottom: 1rem!important;
+    }
+
+    .box-input:nth-child(2) {
+        margin-left: 0;
+    }
+}
+    </style>
     <title>Cadastre-se</title>
 </head>
 <body>
@@ -165,7 +250,7 @@
                 </div>
             </div>
 
-            <button type="submit" name="submit" class="w-100 btn btn-login">Cadastrar</button>
+            <button type="submit" name="submit" id="submit" class="w-100 btn btn-login">Cadastrar</button>
         </form>
 
         <p>Já possui conta? <a class="link" href="acess.html">Entrar</a></p>

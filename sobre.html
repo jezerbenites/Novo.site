@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="logo-serviço.png" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+    <!-- StyleSheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ac611b35dd.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8a7a4de8a2.js" crossorigin="anonymous"></script>
+
+    
+
+    <!-- Bootstrap Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <style>
+    body {
+        font-family: "Poppins", sans-serif;
+        background-color: #52b788;
+    }
+
+    /* Navbar */
+
+    .navbar {
+        padding: 1rem;
+        background-color: #52b788;
+    }
+
+    .navbar-brand {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #FFF;
+        transition: 1.5s;
+        margin: 0;
+    }
+
+    .nav-item {
+        padding: 0.5px;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        font-weight: 300;
+        color: #FFF;
+        transition: 1.5s;
+    }
+
+    .offcanvas-body,
+    .offcanvas-header {
+        background-color: #52b788;
+        color: #FFF;
+    }
+
+    /* Section Section */
+
+    #wrapper-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100px;
+        max-width: 100%;
+    }
+
+    .container {
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        width: 1200px;
+        background-color:#2d6a4f;
+    }
+
+    .title-form {
+        color: white;
+        font-size: 2.0rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        color: black;
+    }
+
+    .title2 {
+        font-size: 1.2rem;
+        color: black;
+    }
+
+    .box-form2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-items: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+
+    .box-form2 label {
+        padding: 5px;
+        margin: 10px;
+    }
+
+
+
+    /* Footer Section */
+
+    #footer {
+        color: #FFF;
+        text-align: center;
+        min-height: 90px;
+        padding: 10px 100px;
+    }
+
+    .footer-text {
+        margin: 0;
+    }
+
+    .footer-icon {
+        color: #2d6a4f;
+        margin-bottom: 5px;
+        margin-right: 15px;
+    }
+
+    .variant-color {
+        color: #2d6a4f;
+    }
+
+
+    @media (max-width: 1100px) {
+        #footer {
+            padding: 10px 5px;
+        }
+    }
+
+    main {
+        margin: 15px;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: "Ubuntu", sans-serif;
+        color: #314139;
+        font-size: 2.5rem;
+        margin-top: -15px;
+        margin-bottom: 25px;
+        font-weight: bold;
+    }
+
+    p {
+        color: #323232;
+        font-weight: bold;
+    }
+
+    .card-body {
+        color: #323232;
+        font-weight: 400;
+    }
+
+    .col {
+        display: grid;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        border-radius: 20px;
+        box-shadow: 1px 1px 8px black;
+    }
+
+    .card2 {
+        display: flex;
+        border-radius: 20px;
+        box-shadow: 1px 1px 8px black;
+        background-color: white;
+        margin-top: 10px;
+        padding: 15px;
+    }
+
+    .card-title {
+        text-align: center;
+        padding-bottom: 5px;
+        font-weight: bold;
+        color: black;
+        font-size: 1.5rem;
+    }
+
+    .regua {
+        display: block; 
+        padding: 0; 
+        margin: 10px 0; 
+        width: 100%; 
+        height: 4px; 
+        background-color: #52b788;
+        border-radius: 10px;
+    }
+
+    .card-text {
+        text-align: center;
+        font-weight: 500;
+    }
+
+    strong {
+        font-size: 0.9rem;
+    }
+
+    </style>
+    <title>Desenvolvedores do site</title>
+</head>
+<body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="index.html">Serviço Social</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                        Menu
+                    </h5>
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="pibex.html">
+                                <i class="fa-brands fa-wpforms"></i>
+                                Formulário
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="grafico.html">
+                                <i class="fa-solid fa-chart-line"></i>
+                                Gráficos
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-user"></i>
+                                Perfil
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html">
+                                <i class="fa-solid fa-circle-info"></i>
+                                Sobre
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <h1 class="cards-text">Desenvolvedores</h1>
+            <div class="row row-cols-1 row-cols-md-3 g-2">
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Guilherme Gonçalves Bastidas</h5>
+                      <span class="regua"></span>
+                      <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="far fa-calendar"></i>23 anos</p>
+                      <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-map-marker-alt"></i>Itu/SP</p>
+                      <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-laptop-code"></i>Futuro Desenvolvedor Front-End</p>
+                      <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="far fa-envelope"></i>Contato: <strong>bastida.13579@gmail.com</strong></p>
+                      <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-code"></i>github.com/guibastidas</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Matheus Silvestre Monteiro</h5>
+                        <span class="regua"></span>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="far fa-calendar"></i>19 anos</p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-map-marker-alt"></i>Itu/Sp</p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-laptop-code"></i>Futuro Desenvolvedor Front-End</p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="far fa-envelope"></i>Contato: <strong>matheussilvestre252@gmail.com</strong></p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-code"></i>github.com/</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Jézer Matheus Benites</h5>
+                        <span class="regua"></span>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="far fa-calendar"></i>24 anos</p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-map-marker-alt"></i>Itu/SP</p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-laptop-code"></i>Futuro Desenvolvedor Back-end</p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="far fa-envelope"></i>Contato: <strong>jezer828@gmail.com</strong></p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fa-brands fa-linkedin"></i>linkedin.com/in/jezerbenites</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Pedro Saito</h5>
+                        <span class="regua"></span>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="far fa-calendar"></i>24 anos</p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-map-marker-alt"></i>Boituva/SP</p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-laptop-code"></i>Desenvolvedor Bi</p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="far fa-envelope"></i>Contato: <strong>contato.pedrosaito@gmail.com</strong></p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-code"></i>github.com/pedrosaito1</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Kauan Silva</h5>
+                        <span class="regua"></span>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="far fa-calendar"></i>21 anos</p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-map-marker-alt"></i>Porto Feliz/SP</p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-laptop-code"></i></p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="far fa-envelope"></i>Contato: <strong>kauansilva2001@outlook.com</strong></p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-code"></i>github.com/kkauans</p>
+                        <p class="card-text"></p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Samuel Peixoto</h5>
+                        <span class="regua"></span>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="far fa-calendar"></i>19 anos</p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-map-marker-alt"></i>Itu/SP</p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-laptop-code"></i></p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="far fa-envelope"></i>Contato: <strong>sassmuel.zer06@gmail.com</strong></p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-code"></i>github.com/SamuelPRodrigues</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <div class="col">
+                    <div class="card2">
+                      <div class="card-body">
+                        <h5 class="card-title">Felipe Pelegrini</h5>
+                        <span class="regua"></span>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="far fa-calendar"></i>19 anos</p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-map-marker-alt"></i>Itu/SP</p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-laptop-code"></i>Futuro Anlista de Sistemas</p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="far fa-envelope"></i>Contato: <strong>felipe_pelegrini@hotmail.com</strong></p>
+                        <p class="card-text"><i style="margin-right: 5px; color: #2d6a4f" class="fas fa-code"></i>github.com/</p>
+                      </div>
+                    </div>
+                </div>
+    </main>
+    <footer id="footer">
+        <div class="container-fluid">
+            <a href="#"><i class="fa-brands fa-telegram fa-2x footer-icon"></i></a>
+            <a href="#"><i class="social-icon fa fa-solid fa-2x fa-envelope footer-icon"></i></a>
+            <a href="#"><i class="fa-brands fa-github fa-2x footer-icon"></i></a>
+        
+            <p class="footer-text">Desenvolvido por <span class="variant-color">WolfPack</span> | Todos os direitos reservados. &copy; 2022</p>
+        </div>
+    </footer>
+</body>
