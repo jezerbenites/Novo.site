@@ -1,3 +1,68 @@
+<?php
+    if(isset($_POST['submit']))
+    {   
+        include_once('config.php');
+
+        $nome =             $_POST['nome'];
+        $idade =            $_POST['idade'];
+        $municipio =        $_POST['municipio'];
+        $fundamental =      $_POST['fundamental'];
+        $medio=             $_POST['medio'];
+        $superior=          $_POST['superior'];
+        $religiao=          $_POST['religiao'];
+        $genero=            $_POST['genero'];
+        $estado=            $_POST['estado'];
+        $etnia=             $_POST['etnia'];
+        $empregado=         $_POST['empregado'];
+        $naoempregado=      $_POST['naoempregado'];
+        $tempoTerritorio=   $_POST['tempoTerritorio'];
+        $desabamento=       $_POST['desabamento'];
+        $apoio=             $_POST['apoio'];
+        $contar=            $_POST['contar'];
+        $qtdpessoas=        $_POST['qtdpessoas'];
+        $qtdcriancas=       $_POST['qtdcriancas'];
+        $qtdadolesc=        $_POST['qtdadolesc'];
+        $deficiencia=       $_POST['deficiencia'];
+        $simdef=            $_POST['simdef'];
+        $renda=             $_POST['renda'];
+        $disptrabalho=      $_POST['disptrabalho'];
+        $semdisp=           $_POST['semdisp'];
+        $provedor=          $_POST['provedor'];
+        $beneficio=         $_POST['beneficio'];
+        $creche=            $_POST['creche'];
+        $escolamunicipal=   $_POST['escolamunicipal'];
+        $grau=              $_POST['grau'];
+        $criancaCasa=       $_POST['criancaCasa'];
+        $criancaEscola=     $_POST['criancaEscola'];
+        $criancasmod=       $_POST['criancasmod'];
+        $criancastr=        $_POST['criancastr'];
+        $qtdadolescentes=   $_POST['qtdadolescentes'];
+        $adolescentes=      $_POST['adolescentes'];
+        $adolescentesmod=   $_POST['adolescentesmod'];
+        $adolescentestr=    $_POST['adolescentestr'];
+        $gravidez=          $_POST['gravidez'];
+        $habmodalidade=     $_POST['habmodalidade'];
+        $internet=          $_POST['internet'];
+        $descinternet=      $_POST['descinternet'];
+        $ubs=               $_POST['ubs'];
+        $referenciaubs=     $_POST['referenciaubs'];
+        $doenca=            $_POST['doenca'];
+        $lazer=             $_POST['lazer'];
+        $desclazer=         $_POST['desclazer'];
+
+        $result = mysqli_query($conexao, "INSERT INTO pibex(nome, idade, municipio, fundamental, medio, superior, religiao, genero, estado,
+        etnia, empregado, naoempregado, tempoTerritorio, desabamento, apoio, contar, qtdpessoas, qtdcriancas, qtdadolesc, deficiencia, simdef,
+        renda, disptrabalho, semdisp, provedor, beneficio, creche, escolamunicipal, grau, criancaCasa, criancaEscola, criancasmod, criancastr,
+        qtdadolescentes, adolescentes, adolescentesmod, adolescentestr, gravidez,habmodalidade,internet,descinternet,ubs,referenciaubs,doenca,
+        lazer,desclazer)
+        VALUES ('$nome', '$idade', '$municipio','$fundamental','$medio','$superior','$religiao','$genero','$estado','$etnia','$empregado','$naoempregado',
+        '$tempoTerritorio','$desabamento','$apoio', '$contar','$qtdpessoas','$qtdcriancas','$qtdadolesc','$deficiencia','$simdef',
+        '$renda','$disptrabalho','$semdisp','$provedor','$beneficio','$creche','$escolamunicipal','$grau','$criancaCasa','$criancaEscola','$criancasmod',
+        '$criancastr','$qtdadolescentes','$adolescentes','$adolescentesmod','$adolescentestr','$gravidez','$habmodalidade','$internet','$descinternet','$ubs',
+        '$referenciaubs','$doenca','$lazer','$desclazer')");
+      
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -247,7 +312,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="pibex.html">
+                            <a class="nav-link" href="pibex.php">
                                 <i class="fa-brands fa-wpforms"></i>
                                 Formulário
                             </a>
@@ -278,7 +343,7 @@
             <div class="container-fluid main">
                 <h1 class="title">Formulário do PIBEX</h1>
 
-                <form action="#" method="#">
+                <form action="pibex.php" method="POST">
                     <div class="wrapper-topic">
                         <h2 class="subtitle">1. Identificação</h2>
 
@@ -308,20 +373,20 @@
                                 <div class="box-input">
                                     <p>Ensino fundamental: </p>
                                     <div class="wrapper-radio">
-                                        <input class="form-check-input" type="radio" name="fund_incompleto" id="fund_incompleto" value="fund_incompleto">
+                                        <input class="form-check-input" type="radio" name="fundamental" id="fund_incompleto" value="fund_incompleto">
                                         <label class="form-check-label" for="fund_incompleto">Incompleto</label>
 
-                                        <input class="form-check-input" type="radio" name="fund_completo" id="fund_completo" value="fund_completo">
+                                        <input class="form-check-input" type="radio" name="fundamental" id="fund_completo" value="fund_completo">
                                         <label class="form-check-label" for="fund_completo">Completo</label>
                                     </div>
                                 </div>
                                 <div class="box-input">
                                     <p>Ensino médio:</p>
                                     <div class="wrapper-radio">
-                                        <input class="form-check-input" type="radio" name="medio_incompleto" id="medio_incompleto" value="medio_incompleto">
+                                        <input class="form-check-input" type="radio" name="medio" id="medio_incompleto" value="medio_incompleto">
                                         <label class="form-check-label" for="medio_incompleto">Incompleto</label>
 
-                                        <input class="form-check-input" type="radio" name="medio_completo" id="medio_completo" value="medio_completo">
+                                        <input class="form-check-input" type="radio" name="medio" id="medio_completo" value="medio_completo">
                                         <label class="form-check-label" for="medio_completo">Completo</label>
                                     </div>
                                 </div>
@@ -329,10 +394,10 @@
                                 <div class="box-input">
                                     <p>Ensino Superior:</p>
                                     <div class="wrapper-radio">
-                                        <input class="form-check-input" type="radio" name="sup_incompleto" id="sup_incompleto" value="sup_incompleto">
+                                        <input class="form-check-input" type="radio" name="superior" id="sup_incompleto" value="sup_incompleto">
                                         <label class="form-check-label" for="sup_incompleto">Incompleto</label>
 
-                                        <input class="form-check-input" type="radio" name="sup_completo" id="sup_completo" value="sup_completo">
+                                        <input class="form-check-input" type="radio" name="superior" id="sup_completo" value="sup_completo">
                                         <label class="form-check-label" for="sup_completo">Completo</label>
                                     </div>
                                 </div>
@@ -345,7 +410,7 @@
                                 <div class="box-input">
                                     <label for="religiao" class="label-select">Qual a sua religião? </label>
                                     <select name="religiao" id="religiao" class="form-select">
-                                        <option value="default"></option>
+                                        <option value="default">Selecione...</option>
                                         <option value="catolico">Católico</option>
                                         <option value="evangelico">Evangélico</option>
                                         <option value="espirita">Espírita</option>
@@ -360,7 +425,7 @@
                                 <div class="box-input">
                                     <label for="genero" class="label-select">Qual sua identidade de gênero? </label>
                                     <select name="genero" id="genero" class="form-select">
-                                        <option value="default"></option>
+                                        <option value="default">Selecione...</option>
                                         <option value="hetero">Heterossexual</option>
                                         <option value="homo">Homossexual</option>
                                         <option value="bi">Bissexual</option>
@@ -375,7 +440,7 @@
                             <div class="box-input">
                                     <label for="estado-civil" class="label-select">Qual seu estado civil? </label>
                                     <select name="estado" id="estado" class="form-select">
-                                        <option value="default"></option>
+                                        <option value="default">Selecione...</option>
                                         <option value="solteiro">Solteiro</option>
                                         <option value="casado">Casado</option>
                                         <option value="uniao-estavel">União Estável</option>
@@ -385,8 +450,8 @@
                             
                             <div class="box-input">
                                 <label for="raça" class="label-select">Como você se autodeclara? </label>
-                                    <select name="raça" id="raça" class="form-select">
-                                        <option value="default"></option>
+                                    <select name="etnia" id="raça" class="form-select">
+                                        <option value="default">Selecione...</option>
                                         <option value="branco">Branco</option>
                                         <option value="Negro">Negro</option>
                                         <option value="Pardo">Pardo</option>
@@ -401,22 +466,25 @@
                                     <p>Empregado?</p>
 
                                     <div class="wrapper-radio">
-                                        <input type="radio" id="empregado" name="empregado" class="form-check-input">
+                                        <input type="radio" id="empregado" name="empregado" class="form-check-input" value="sim">
                                         <label for="sim" class="form-check-label">Sim</label>
-                                        <input type="radio" id="empregado" name="empregado" class="form-check-input">
+                                        <input type="radio" id="empregado" name="empregado" class="form-check-input" value="nao">
                                         <label for="nao" class="form-check-label">Não</label>
                                     </div>
+                                    
                                 </div>
 
                                 <div class="box-input">
                                     <p>Se resposta não, quanto tempo desempregado?</p>
 
                                     <div class="wrapper-radio">
-                                        <input type="radio" id="nao-empregado" name="nao-empregado" class="form-check-input">
+                                        <input type="radio" id="nao-empregado" name="naoempregado" class="form-check-input" value="1ano">
+                                        <label for="1ano" class="form-check-label">0</label>
+                                        <input type="radio" id="nao-empregado" name="naoempregado" class="form-check-input" value="1ano">
                                         <label for="1ano" class="form-check-label">1 ano</label>
-                                        <input type="radio" id="nao-empregado" name="nao-empregado" class="form-check-input">
+                                        <input type="radio" id="nao-empregado" name="naoempregado" class="form-check-input" value="2anos">
                                         <label for="2ano" class="form-check-label">2 anos</label>
-                                        <input type="radio" id="nao-empregado" name="nao-empregado" class="form-check-input">
+                                        <input type="radio" id="nao-empregado" name="naoempregado" class="form-check-input" value="3anos ou mais">
                                         <label for="3ouMais" class="form-check-label">3 ou Mais</label>
                                     </div>
                                 </div>
@@ -426,7 +494,7 @@
                                 <div class="box-input">
                                     <label for="tempoTerritorio" class="label-select">Há quanto tempo você/sua família mora no território?</label>
                                     <select name="tempoTerritorio" id="tempoTerritorio" class="form-select">
-                                        <option value="default"></option>
+                                        <option value="default">Selecione...</option>
                                         <option value="menos1Ano">menos de 1 ano</option>
                                         <option value="mais1Ano">mais de 1 ano</option>
                                         <option value="mais5Ano">mais de 5 anos</option>
@@ -438,9 +506,9 @@
                                     <p>Reconhece algum risco de desabamento no local?</p>
 
                                     <div class="wrapper-radio">
-                                        <input type="radio" name="desabamento-sim" id="desabamento-sim" value="Sim" class="form-check-input">
+                                        <input type="radio" name="desabamento" id="desabamento" value="Sim" class="form-check-input">
                                         <label for="desabamento-sim" class="form-check-label">Sim</label>
-                                        <input type="radio" name="desabamento-nao" id="desabamento-nao" value="Não" class="form-check-input">
+                                        <input type="radio" name="desabamento" id="desabamento" value="Não" class="form-check-input">
                                         <label for="desabamento-nao" class="form-check-label">Não</label>
                                     </div>
                                 </div>
@@ -451,9 +519,9 @@
                                     <p>Você tem rede de apoio?</p>
 
                                     <div class="wrapper-radio">
-                                        <input type="radio" name="apoio-sim" id="apoio-sim" value="Sim" class="form-check-input">
+                                        <input type="radio" name="apoio" id="apoio-sim" value="Sim" class="form-check-input">
                                         <label for="apoio-sim" class="form-check-label">Sim</label>
-                                        <input type="radio" name="apoio-nao" id="apoio-nao" value="Não" class="form-check-input">
+                                        <input type="radio" name="apoio" id="apoio-nao" value="Não" class="form-check-input">
                                         <label for="apoio-nao" class="form-check-label">Não</label>
                                     </div>
                                 </div>
@@ -461,7 +529,7 @@
                                 <div class="box-input">
                                     <label for="contar" class="label-select">Com quem você pode contar </label>
                                     <select name="contar" id="contar" class="form-select">
-                                        <option value="default"></option>
+                                        <option value="default">Selecione...</option>
                                         <option value="comunidade">Comunidade</option>
                                         <option value="comadre">Comadre</option>
                                         <option value="igreja">Igreja</option>
@@ -481,8 +549,9 @@
                             <div class="mb-3 wrapper">
                                 <div class="box-input">
                                     <label for="qtd-pessoas" class="label-select">Quantas pessoas moram na mesma casa?</label>
-                                    <select name="qtd-pessoas" id="qtd-pessoas" class="form-select">
-                                        <option value="default"></option>
+                                    <select name="qtdpessoas" id="qtd-pessoas" class="form-select">
+                                        <option value="default">Selecione...</option>
+                                        <option value="0">0</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -498,8 +567,9 @@
 
                                 <div class="box-input">
                                     <label for="qtd-criancas" class="label-select">Quantas crianças moram na residência?</label>
-                                    <select name="qtd-criancas" id="qtd-criancas" class="form-select">
-                                        <option value="default"></option>
+                                    <select name="qtdcriancas" id="qtd-criancas" class="form-select">
+                                        <option value="default">Selecione...</option>
+                                        <option value="0">0</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -515,8 +585,9 @@
 
                                 <div class="box-input">
                                     <label for="qtd-adolesc" class="label-select">Quantos adolescentes moram na residência?</label>
-                                    <select name="qtd-adolesc" id="qtd-adolesc" class="form-select">
-                                        <option value="default"></option>
+                                    <select name="qtdadolesc" id="qtd-adolesc" class="form-select">
+                                        <option value="default">Selecione...</option>
+                                        <option value="0">0</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -535,16 +606,16 @@
                                     <p>Há pessoas com deficiência na fámilia?</p>
 
                                     <div class="wrapper-radio">
-                                        <input type="radio" name="deficiencia-sim" id="deficiencia-sim" value="Sim" class="form-check-input">
+                                        <input type="radio" name="deficiencia" id="deficiencia-sim" value="Sim" class="form-check-input">
                                         <label for="deficiencia-sim" class="form-check-label">Sim</label>
-                                        <input type="radio" name="deficiencia-nao" id="deficiencia-nao" value="Não" class="form-check-input">
+                                        <input type="radio" name="deficiencia" id="deficiencia-nao" value="Não" class="form-check-input">
                                         <label for="deficiencia-nao" class="form-check-label">Não</label>
                                     </div>
                                 </div>
 
                                 <div class="box-input">
                                     <label for="text">Se sim, qual: </label>
-                                    <input type="text" class="form-control" id="desc-def" name="desc-def">
+                                    <input type="text" class="form-control" id="desc-def" name="simdef" value="Qual deficiência">
                                 </div>
                             </div>
 
@@ -552,7 +623,7 @@
                                 <div class="box-input-alter">
                                     <label for="renda" class="label-select">Qual a renda mensal familiar? (considerar a soma das rendas de todos os familiares que trabalham e que moram com você)</label>
                                     <select name="renda" id="renda" class="form-select">
-                                        <option value="default"></option>
+                                        <option value="default">Selecione...</option>
                                         <option value="nivel1">Até meio salário mínimo (até R$ 606,00)</option>
                                         <option value="nivel">Entre meio salário até R$ 1.212,00</option>
                                         <option value="nivel3">R$ 1.212,00 a R$ 2.424,00</option>
@@ -569,9 +640,9 @@
                                     <p>Tem disponibilidade para trabalhar?</p>
 
                                     <div class="wrapper-radio">
-                                        <input type="radio" name="disp-trabalho-sim" id="disp-trabalho-sim" value="Sim" class="form-check-input">
+                                        <input type="radio" name="disptrabalho" id="disp-trabalho-sim" value="Sim" class="form-check-input">
                                         <label for="disp-trabalho-sim" class="form-check-label">Sim</label>
-                                        <input type="radio" name="disp-trabalho-sim" id="disp-trabalho-sim" value="Não" class="form-check-input">
+                                        <input type="radio" name="disptrabalho" id="disp-trabalho-sim" value="Não" class="form-check-input">
                                         <label for="disp-trabalho-sim" class="form-check-label">Não</label>
                                     </div>
                                 </div>
@@ -579,10 +650,12 @@
                                 <div class="box-input">
                                     <p>Se não, porquê?</p>
 
-                                    <div class="wrapper-radio">
-                                        <input type="radio" name="deficiencia" id="criança" value="criança" class="form-check-input">
+                                    <div class="wrapper-radio">                               
+                                        <input type="radio" name="semdisp" id="criança" value="criança" class="form-check-input">
+                                        <label for="criança" class="form-check-label">Nenhum motivo</label>
+                                        <input type="radio" name="semdisp" id="criança" value="criança" class="form-check-input">
                                         <label for="criança" class="form-check-label">Criança</label>
-                                        <input type="radio" name="deficiencia" id="idoso" value="idoso" class="form-check-input">
+                                        <input type="radio" name="semdisp" id="idoso" value="idoso" class="form-check-input">
                                         <label for="idoso" class="form-check-label">Idoso</label>
                                     </div>
                                 </div>
@@ -593,7 +666,7 @@
                                     <label for="provedor" class="label-select">Qual a situação de trabalho dos(as) provedores(as) da família?
                                     </label>
                                     <select name="provedor" id="provedor" class="form-select">
-                                        <option value="default"></option>
+                                        <option value="default">Selecione...</option>
                                         <option value="cuidadora">Cuidadora do lar</option>         
                                         <option value="autonomo">Trabalhador(a) autônomo(a)</option>
                                         <option value="formal">Trabalhador(a) formal (com registro em carteira)</option>
@@ -609,7 +682,7 @@
                                 <div class="box-input-alter">
                                     <label for="beneficio" class="label-select">Recebe algum tipo de benefício?</label>
                                     <select name="beneficio" id="beneficio" class="form-select">
-                                        <option value="default"></option>
+                                        <option value="default">Selecione...</option>
                                         <option value="bpc-idoso">BPC idoso</option>                       
                                         <option value="pcd">BPC PCD </option> 
                                         <option value="auxilio-brasil">Auxilio Brasil</option>  
@@ -632,9 +705,9 @@
                                             <p>Há creche no bairro?</p>
         
                                             <div class="wrapper-radio">
-                                                <input type="radio" name="creche-sim" id="creche-sim" value="Sim" class="form-check-input">
+                                                <input type="radio" name="creche" id="creche-sim" value="Sim" class="form-check-input">
                                                 <label for="creche-sim" class="form-check-label">Sim</label>
-                                                <input type="radio" name="creche-nao" id="creche-nao" value="Não" class="form-check-input">
+                                                <input type="radio" name="creche" id="creche-nao" value="Não" class="form-check-input">
                                                 <label for="creche-nao" class="form-check-label">Não</label>
                                             </div>
                                         </div>
@@ -642,9 +715,9 @@
                                             <p>Há escola Municipal?</p>
         
                                             <div class="wrapper-radio">
-                                                <input type="radio" name="escola-municipal-sim" id="escola-municipal-sim" value="Sim" class="form-check-input">
+                                                <input type="radio" name="escolamunicipal" id="escola-municipal-sim" value="Sim" class="form-check-input">
                                                 <label for="escola-municipal-sim" class="form-check-label">Sim</label>
-                                                <input type="radio" name="escola-municipal-nao" id="escola-municipal-nao" value="Não" class="form-check-input">
+                                                <input type="radio" name="escolamunicipal" id="escola-municipal-nao" value="Não" class="form-check-input">
                                                 <label for="escola-municipal-nao" class="form-check-label">Não</label>
                                             </div>
                                         </div>
@@ -654,7 +727,7 @@
                                         <div class="box-input-alter">
                                             <label for="grau" class="label-select">Qual o seu grau de escolaridade?</label>
                                             <select name="grau" id="grau" class="form-select">
-                                                <option value="default"></option>
+                                                <option value="default">Selecione...</option>
                                                 <option value="nunca">Nunca frequentou a escola</option>
                                                 <option value="fundamental-incompleto">Ensino fundamental incompleto</option>
                                                 <option value="fundamental-completo">Ensino fundamental completo (concluiu o 9º ano, antiga 8º série)</option>
@@ -672,16 +745,16 @@
                                     <div class="mb-3 wrapper">
                                         <div class="box-input">
                                             <label for="criancas">Quantas crianças moram na casa?</label>
-                                            <input type="number" class="form-control" id="desc-def" name="desc-def">
+                                            <input type="number" class="form-control" id="desc-def" name="criancaCasa">
                                         </div>
 
                                         <div class="box-input">
                                             <p>Todas frequentam a escola?</p>
         
                                             <div class="wrapper-radio">
-                                                <input type="radio" name="criancas-escola-sim" id="criancas-escola-sim" value="Sim" class="form-check-input">
+                                                <input type="radio" name="criancaEscola" id="criancas-escola-sim" value="Sim" class="form-check-input">
                                                 <label for="criancas-escola-sim" class="form-check-label">Sim</label>
-                                                <input type="radio" name="criancas-escola-nao" id="criancas-escola-nao" value="Não" class="form-check-input">
+                                                <input type="radio" name="criancaEscola" id="criancas-escola-nao" value="Não" class="form-check-input">
                                                 <label for="criancas-escola-nao" class="form-check-label">Não</label>
                                             </div>
                                         </div>
@@ -690,8 +763,8 @@
                                     <div class="mb-3 wrapper">
                                         <div class="box-input">
                                             <label for="criancas-modalidade" class="label-select">Qual modalidade atualmente?</label>
-                                            <select name="criancas-modalidade" id="criancas-modalidade" class="form-select">
-                                                <option value="default"></option>
+                                            <select name="criancasmod" id="criancas-modalidade" class="form-select">
+                                                <option value="default">Selecione...</option>
                                                 <option value="bercario">Berçário</option>
                                                 <option value="maternal">Maternal</option>
                                                 <option value="infantil">Educação Infantil</option>
@@ -703,9 +776,9 @@
                                             <p>O aluna(o) utiliza transporte escolar?</p>
         
                                             <div class="wrapper-radio">
-                                                <input type="radio" name="criancas-transporte-sim" id="criancas-transporte-sim" value="Sim" class="form-check-input">
+                                                <input type="radio" name="criancastr" id="criancas-transporte-sim" value="Sim" class="form-check-input">
                                                 <label for="criancas-transporte-sim" class="form-check-label">Sim</label>
-                                                <input type="radio" name="criancas-transporte-nao" id="criancas-transporte-nao" value="Não" class="form-check-input">
+                                                <input type="radio" name="criancastr" id="criancas-transporte-nao" value="Não" class="form-check-input">
                                                 <label for="criancas-transporte-nao" class="form-check-label">Não</label>
                                             </div>
                                         </div>
@@ -716,17 +789,17 @@
                                     
                                     <div class="mb-3 wrapper">
                                         <div class="box-input">
-                                            <label for="adolescentes">Quantas adolescentes moram na casa?</label>
-                                            <input type="number" class="form-control" id="adolescentes" name="adolescentes">
+                                            <label for="qtdadolescentes">Quantas adolescentes moram na casa?</label>
+                                            <input type="number" class="form-control" id="adolescentes" name="qtdadolescentes" value="Quantidade adolescentes">
                                         </div>
 
                                         <div class="box-input">
                                             <p>Todas frequentam a escola?</p>
         
                                             <div class="wrapper-radio">
-                                                <input type="radio" name="adolescentes-sim" id="adolescentes-sim" value="Sim" class="form-check-input">
+                                                <input type="radio" name="adolescentes" id="adolescentes-sim" value="Sim" class="form-check-input">
                                                 <label for="adolescentes-sim" class="form-check-label">Sim</label>
-                                                <input type="radio" name="adolescentes-nao" id="adolescentes-nao" value="Não" class="form-check-input">
+                                                <input type="radio" name="adolescentes" id="adolescentes-nao" value="Não" class="form-check-input">
                                                 <label for="adolescentes-nao" class="form-check-label">Não</label>
                                             </div>
                                         </div>
@@ -735,8 +808,8 @@
                                     <div class="mb-3 wrapper">
                                         <div class="box-input-alter">
                                             <label for="adolescentes-modalidade" class="label-select">Qual modalidade atualmente?</label>
-                                            <select name="adolescentes-modalidade" id="adolescentes-modalidade" class="form-select">
-                                                <option value="default"></option>
+                                            <select name="adolescentesmod" id="adolescentes-modalidade" class="form-select">
+                                                <option value="default">Selecione...</option>
                                                 <option value="bercario">Fundamental II (6º ao 9º ano)</option>
                                                 <option value="maternal">Ensino Médio</option>
                                                 <option value="infantil">EJA</option>
@@ -749,9 +822,9 @@
                                             <p>O aluna(o) utiliza transporte escolar?</p>
         
                                             <div class="wrapper-radio">
-                                                <input type="radio" name="adolescentes-transporte-sim" id="adolescentes-transporte-sim" value="Sim" class="form-check-input">
+                                                <input type="radio" name="adolescentestr" id="adolescentes-transporte-sim" value="Sim" class="form-check-input">
                                                 <label for="adolescentes-transporte-sim" class="form-check-label">Sim</label>
-                                                <input type="radio" name="adolescentes-transporte-nao" id="adolescentes-transporte-nao" value="Não" class="form-check-input">
+                                                <input type="radio" name="adolescentestr" id="adolescentes-transporte-nao" value="Não" class="form-check-input">
                                                 <label for="adolescentes-transporte-nao" class="form-check-label">Não</label>
                                             </div>
                                         </div>
@@ -760,9 +833,9 @@
                                             <p>Tem algum caso de gravidez na adolescência na família?</p>
         
                                             <div class="wrapper-radio">
-                                                <input type="radio" name="gravidez-sim" id="gravidez-sim" value="Sim" class="form-check-input">
+                                                <input type="radio" name="gravidez" id="gravidez-sim" value="Sim" class="form-check-input">
                                                 <label for="gravidez-sim" class="form-check-label">Sim</label>
-                                                <input type="radio" name="gravidez-nao" id="gravidez-nao" value="Não" class="form-check-input">
+                                                <input type="radio" name="gravidez" id="gravidez-nao" value="Não" class="form-check-input">
                                                 <label for="gravidez-nao" class="form-check-label">Não</label>
                                             </div>
                                         </div>
@@ -771,7 +844,7 @@
                             </div>
 
                         <div class="wrapper-topic">
-                            <h2 class="subtitle">4. Habilitação</h2>
+                            <h2 class="subtitle">4. Habitação</h2>
     
                             <div class="container-inputs">
                                 <small class="description">4.1 Dados básicos</small>
@@ -779,8 +852,8 @@
                                 <div class="mb-3 wrapper">
                                     <div class="box-input">
                                         <label for="hab-modalidade" class="label-select">Qual modalidade atualmente?</label>
-                                        <select name="hab-modalidade" id="hab-modalidade" class="form-select">
-                                            <option value="default"></option>
+                                        <select name="habmodalidade" id="hab-modalidade" class="form-select">
+                                            <option value="default">Selecione...</option>
                                             <option value="alvenaria-revestimento">Alvenaria/tijolo com revestimento</option>
                                             <option value="alvenaria-sem-reves">Alvenaria/tijolo sem revestimento</option>
                                             <option value="madeira">Madeira aparelhada</option>
@@ -793,9 +866,9 @@
                                         <p>A família tem acesso à internet?</p>
     
                                         <div class="wrapper-radio">
-                                            <input type="radio" name="internet-sim" id="internet-sim" value="Sim" class="form-check-input">
+                                            <input type="radio" name="internet" id="internet-sim" value="Sim" class="form-check-input">
                                             <label for="internet-sim" class="form-check-label">Sim</label>
-                                            <input type="radio" name="internet-nao" id="internet-nao" value="Não" class="form-check-input">
+                                            <input type="radio" name="internet" id="internet-nao" value="Não" class="form-check-input">
                                             <label for="internet-nao" class="form-check-label">Não</label>
                                         </div>
                                     </div>
@@ -804,8 +877,9 @@
                                 <div class="mb-3 wrapper">
                                     <div class="box-input-alter">
                                         <label for="desc-internet" class="label-select">Complementando a pergunta anterior, se a resposta for SIM, como acessa a internet:</label>
-                                        <select name="desc-internet" id="desc-internet" class="form-select">
-                                            <option value="default"></option>
+                                        <select name="descinternet" id="desc-internet" class="form-select">
+                                            <option value="default">Nenhuma opção...</option>
+                                            <option value="default">Selecione...</option>
                                             <option value="pc-casa">Do computador de casa</option>
                                             <option value="cel-pessoal">Do celular pessoal</option>
                                             <option value="cel-emprestado">De celular emprestado</option>
@@ -828,16 +902,16 @@
                                         <p>Há Acesso à UBS?</p>
     
                                         <div class="wrapper-radio">
-                                            <input type="radio" name="ubs-sim" id="ubs-sim" value="Sim" class="form-check-input">
+                                            <input type="radio" name="ubs" id="ubs-sim" value="Sim" class="form-check-input">
                                             <label for="ubs-sim" class="form-check-label">Sim</label>
-                                            <input type="radio" name="ubs-nao" id="ubs-nao" value="Não" class="form-check-input">
+                                            <input type="radio" name="ubs" id="ubs-nao" value="Não" class="form-check-input">
                                             <label for="ubs-nao" class="form-check-label">Não</label>
                                         </div>
                                     </div>
                                     
                                     <div class="box-input">
                                         <label for="referencia-ubs">Se sim, qual a sua UBS de referência</label>
-                                        <input type="text" class="form-control" id="referencia-ubs" name="referencia-ubs">
+                                        <input type="text" class="form-control" id="referencia-ubs" name="referenciaubs">
                                     </div>
                                 </div>
 
@@ -845,7 +919,8 @@
                                     <div class="box-input-alter">
                                         <label for="doenca" class="label-select">Há pessoas da família com doenças crônicas?</label>
                                         <select name="doenca" id="doenca" class="form-select">
-                                            <option value="default"></option>
+                                            <option value="default">Nenhuma opção...</option>
+                                            <option value="default">Selecione...</option>
                                             <option value="diabetes">Diabetes</option>
                                             <option value="pressao-alta">Pressão Alta</option>
                                             <option value="colesterol">Colesterol</option>
@@ -870,20 +945,21 @@
                                         <p>Há área de lazer no bairro?</p>
     
                                         <div class="wrapper-radio">
-                                            <input type="radio" name="lazer-sim" id="lazer-sim" value="Sim" class="form-check-input">
+                                            <input type="radio" name="lazer" id="lazer-sim" value="Sim" class="form-check-input">
                                             <label for="lazer-sim" class="form-check-label">Sim</label>
-                                            <input type="radio" name="lazer-nao" id="lazer-nao" value="Não" class="form-check-input">
+                                            <input type="radio" name="lazer" id="lazer-nao" value="Não" class="form-check-input">
                                             <label for="lazer-nao" class="form-check-label">Não</label>
                                         </div>
                                     </div>
                                     
                                     <div class="box-input">
                                         <label for="desc-lazer">Se sim, qual?</label>
-                                        <input type="text" class="form-control" id="desc-lazer" name="desc-lazer">
+                                        <input type="text" class="form-control" id="desc-lazer" name="desclazer">
                                     </div>
                                 </div>
                             </div> 
-                            <button type="submit" class="btn btn-light">Enviar dados</button>
+                            
+                            <button type="submit" name="submit" id="submit" class="btn btn-light">Enviar dados</button>
                         </div>  
                 </form>
             </div>
@@ -898,4 +974,4 @@
             </div>
         </footer>
     </body>
-</html>
+</html> 
